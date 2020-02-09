@@ -7,6 +7,21 @@
   pointer-events: none;
 }
 
+.pagination{
+  display:flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.pagination li{
+  margin: 0 10px;
+}
+
+body{
+  /* background-color: rgb(145, 145, 145); */
+  background-color: rgb(114, 24, 1);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
