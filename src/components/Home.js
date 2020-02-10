@@ -2,18 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 import Particles from 'react-particles-js';
 
+const ParentDiv = styled.div`
+    position: relative;
+    height: 90vh;
+    width:100%;
+    overflow: hidden;
 
-const MyDiv = styled.div`
-    padding-top: 15vh;
-    width: 100%;
-    height: 100vh;
-    ${'' /* background-color: skyblue; */}
 `
 
-const Appa = styled.div`
-padding-top: 50vh;
-
-
+const MyDiv = styled.div`
+    ${'' /* padding-top: 15vh; */}
+    width: 100%;
+    ${'' /* height: 80vh; */}
+    ${'' /* background-color: skyblue; */}
+    position: absolute;
+`
+const Appa = styled.img`
+width: 25%;
+`
+const SecDiv = styled.div`    
+    z-index: 9;
+    
 `
 
 const particleAttrs = {
@@ -128,14 +137,20 @@ const particleAttrs = {
   }
 
 const Home = () => {
+
     return(
-        <div>
-            <h1>Hello World</h1>
-            
-                <img src="../img/appa.png" alt='image-of-appa'/>
-        
+        <ParentDiv>
+        <MyDiv id="particles-js">
             <Particles params={particleAttrs} />
-        </div>
+        </MyDiv>
+        <SecDiv>
+            <h1>Hello World</h1>            
+            <Appa src={require('./appa.svg')} />
+        </SecDiv>
+            
+        </ParentDiv>
+            
+        
         
             
         

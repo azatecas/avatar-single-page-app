@@ -4,12 +4,8 @@ import styled from 'styled-components';
 
 const MyDiv = styled.div`
 
-  width: 300px;
+  width: 350px;
   height: 550px;
-  ${'' /* background-color: gray;
-  color: #282135; */}
-  ${'' /* background-color: #ffdd99;
-    background-image: url("https://www.transparenttextures.com/patterns/dark-stripes-light.png"); */}
     background-color: #ffce5c;
     background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
 
@@ -17,10 +13,6 @@ const MyDiv = styled.div`
   margin: 10px 5px;
   font-family: 'Permanent Marker', cursive;  
   box-shadow: -2px 2px 20px 0px rgba(0,0,0,0.47);
-
-  &:hover{
-      transform: scale(1.2);
-  }
 
 `   //end of MyDiv
 
@@ -52,13 +44,13 @@ const DivStats = styled.div`
 
 
 const CharacterCard = (props) => {
-    console.log('this is props',props.character);  
+    // console.log('this is props',props.character);  
     const { name, allies, enemies, photoUrl } = props.character;  
 
     return (
         <MyDiv>
         <ImgDiv>
-            <img src={photoUrl} width="300px" height="250px" style={{borderRadius: '10px 10px 0px 0px', objectFit: 'cover'}}/>
+            <img src={photoUrl} width="350px" height="250px" style={{borderRadius: '10px 10px 0px 0px', objectFit: 'cover'}}/>
         </ImgDiv>
         <div>
             <h1 className="character-name">{name}</h1>

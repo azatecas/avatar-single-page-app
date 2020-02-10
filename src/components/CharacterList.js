@@ -48,7 +48,7 @@ const CharacterList = () => {
 
     return (
         <div className="character-page">        
-            <h1>characters page</h1>
+            <h1>Avatar Characters</h1>
             <Pagination  postsPerPage={postPerPage} totalPosts={character.length}   paginate={paginate} />  
             <Post character={currentPosts} loading={loading}/>  
             <Pagination  postsPerPage={postPerPage} totalPosts={character.length}   paginate={paginate} />    

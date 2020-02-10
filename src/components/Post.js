@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import CharacterCard from './CharacterCard';
+import '../App.css';
 
 const MyDiv = styled.div`
     display: flex;
@@ -8,10 +9,21 @@ const MyDiv = styled.div`
     flex-wrap: wrap;
     justify-content: space-around;    
     ` //end of MyDiv
+const LoadingDiv = styled.div`
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-item: center;
+    backgroung-color: maroon;    
+
+`
 
 const Post = ({character, loading}) => {
     if (loading){
-        return <h1>Loading...</h1>
+        return <LoadingDiv >
+        <div className="loader">Loading...</div>
+        </LoadingDiv>
     } 
     return(
         <MyDiv>

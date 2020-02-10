@@ -3,7 +3,7 @@ import { Link, Route } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyleHeader = styled.header`
-    position: sticky;
+    
     width: 100%;
     height: 15vh;
     ${'' /* top:0; */}
