@@ -4,9 +4,16 @@ import Particles from 'react-particles-js';
 
 
 const MyDiv = styled.div`
+    padding-top: 15vh;
     width: 100%;
     height: 100vh;
-    background-color: skyblue;
+    ${'' /* background-color: skyblue; */}
+`
+
+const Appa = styled.div`
+padding-top: 50vh;
+
+
 `
 
 const particleAttrs = {
@@ -122,11 +129,16 @@ const particleAttrs = {
 
 const Home = () => {
     return(
-        <Particles params={particleAttrs}>
-            <MyDiv id="particles-js">
-                <h1>This is the Home Page</h1>
-            </MyDiv>
-        </Particles>
+        <div>
+            <h1>Hello World</h1>
+            
+                <img src="../img/appa.png" alt='image-of-appa'/>
+        
+            <Particles params={particleAttrs} />
+        </div>
+        
+            
+        
     )
 }
 

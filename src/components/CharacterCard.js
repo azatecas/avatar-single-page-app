@@ -40,9 +40,6 @@ const DivStats = styled.div`
   
   justify-content: start;
 
-  &.border-top {
-    border-top: 2px solid red;
-  }
   
   ${'' /* font-family: 'arial'; */}
   ${'' /* padding-left: 10px; */}
@@ -66,7 +63,7 @@ const CharacterCard = (props) => {
         <div>
             <h1 className="character-name">{name}</h1>
             <DivStats>
-                <div className="card-content border-top">
+                <div className="card-content">
                     <p><span className="content-label">Affiliation:</span> {
                         props.character.hasOwnProperty("affiliation") ? props.character.affiliation : "unknown"
                     }</p>
