@@ -8,8 +8,11 @@ const MyDiv = styled.div`
   height: 550px;
   ${'' /* background-color: gray;
   color: #282135; */}
-  background-color: #ffdd99;
-    background-image: url("https://www.transparenttextures.com/patterns/dark-stripes-light.png");
+  ${'' /* background-color: #ffdd99;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-stripes-light.png"); */}
+    background-color: #ffce5c;
+    background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+
   border-radius: 20px;
   margin: 10px 5px;
   font-family: 'Permanent Marker', cursive;  
@@ -34,9 +37,17 @@ const DivStats = styled.div`
   height: 200px;
   flex-direction: column;
   align-items: start;
-  justify-content: center;
+  
+  justify-content: start;
+
+  &.border-top {
+    border-top: 2px solid red;
+  }
+  
   ${'' /* font-family: 'arial'; */}
-  padding-left: 10px;
+  ${'' /* padding-left: 10px; */}
+
+  ${'' /* border: 1px solid green; */}
   
 `   //end ImgDiv
 
@@ -50,22 +61,28 @@ const CharacterCard = (props) => {
     return (
         <MyDiv>
         <ImgDiv>
-            <img src={photoUrl} width="300px" height="250px" style={{borderRadius: '10px', objectFit: 'cover'}}/>
+            <img src={photoUrl} width="300px" height="250px" style={{borderRadius: '10px 10px 0px 0px', objectFit: 'cover'}}/>
         </ImgDiv>
         <div>
-            <H1>{name}</H1>
+            <h1 className="character-name">{name}</h1>
             <DivStats>
-                <p>Affiliation: {
-                    props.character.hasOwnProperty("affiliation") ? props.character.affiliation : "unknown"
-                }</p>
-                <p>Allies: {
-                    allies.length !== 0 ? allies.map(item => {
-                    return `${item}, `;
-                }) : "unknown"}</p>
-                <p>Enemies: {
-                    enemies.length !== 0 ? enemies.map(item => {
-                    return `${item}, `;
-                }) : "unknown"}</p>
+                <div className="card-content border-top">
+                    <p><span className="content-label">Affiliation:</span> {
+                        props.character.hasOwnProperty("affiliation") ? props.character.affiliation : "unknown"
+                    }</p>
+                </div>
+                <div className="card-content">
+                    <p><span className="content-label">Allies</span>: {
+                        allies.length !== 0 ? allies.map(item => {
+                        return `${item}, `;
+                    }) : "unknown"}</p>
+                </div>
+                <div className="card-content">
+                    <p><span className="content-label">Enemies:</span> {
+                        enemies.length !== 0 ? enemies.map(item => {
+                        return `${item}, `;
+                    }) : "unknown"}</p>
+                </div>
             </DivStats>
         </div>
         </MyDiv>

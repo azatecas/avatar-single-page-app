@@ -1,3 +1,17 @@
+@font-face {
+	font-family: 'slayer';
+	src: url('./fonts/slayer11.TTF'); 
+	src: 
+		local('Slayer'),
+		local('Slayer'),
+		url('./fonts/slayer11.TTF') 
+		format('TrueType');
+}
+
+.content-label{
+  color: #8c4f00;
+}
+
 .App {
   text-align: center;
 }
@@ -5,6 +19,55 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.nav-logo{
+  width: 40%;
+  /* border: 1px solid lime; */
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  font-family: 'slayer', cursive;
+}
+
+.nav-links {
+  width: 60%;
+  /* border: 2px solid yellow; */
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 24px;
+  align-items: center;
+  color: white;
+  font-family: 'slayer', cursive;
+}
+
+.page-numbers{
+  color: white;
+  font-size: 24px;
+}
+.card-content{
+  border-bottom: 1px solid maroon;
+  width: 100%;
+  /* padding: 0  5px; */
+  height: 60px;
+  display: flex;
+  justify-content: start;
+  overflow: hidden;
+  float: top;
+}
+
+.nav-links p {
+  color: #8c4f00;
+}
+
+.character-name {
+  font-size: 20px;
+/* font-family: 'Permanent Marker', cursive; */
+font-family: 'slayer', cursive;
+border-bottom: 1px solid maroon;
+}
+.character-page{
+  background-color:maroon;
 }
 
 .pagination{
@@ -18,8 +81,9 @@
 }
 
 body{
-  /* background-color: rgb(145, 145, 145); */
-  background-color: rgb(114, 24, 1);
+  background: rgb(129,0,87);
+background: linear-gradient(0deg, rgba(129,0,87,1) 0%, rgba(35,0,91,1) 69%);
+
 }
 
 @media (prefers-reduced-motion: no-preference) {

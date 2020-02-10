@@ -24,8 +24,8 @@ const CharacterList = () => {
         axios
             .get(fullApi)
             .then(res => {
-                console.log('this is res',res.data);
-                setCharacter(res.data);
+                // console.log('this is res',res.data);
+                setCharacter(res.data.sort());
                 setLoading(false);
 
             })
@@ -47,7 +47,7 @@ const CharacterList = () => {
 
 
     return (
-        <div>        
+        <div className="character-page">        
             <h1>characters page</h1>
             <Pagination  postsPerPage={postPerPage} totalPosts={character.length}   paginate={paginate} />  
             <Post character={currentPosts} loading={loading}/>  
