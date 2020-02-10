@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import styled from 'styled-components';
-import CharacterCard from './CharacterCard';
 import Post from "./Post";
 import Pagination from './Pagination';
 
@@ -13,11 +11,11 @@ const CharacterList = () => {
     const [character, setCharacter] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [postPerPage, setPostPerPage] = useState(50);
+    const [postPerPage] = useState(50);
 
     const fullApi = 'https://last-airbender-api.herokuapp.com/api/v1/characters?perPage=1?page=1';
 
-    const partialApi = 'https://last-airbender-api.herokuapp.com/api/v1/characters';
+    // const partialApi = 'https://last-airbender-api.herokuapp.com/api/v1/characters';
     
     useEffect(() => {
         setLoading(true);
@@ -43,6 +41,7 @@ const CharacterList = () => {
     //paginate
     const paginate = (int) => {
         setCurrentPage(int);
+        window.scroll({top: 0, left: 0, behavior: 'smooth' });
     }
 
 

@@ -2,11 +2,9 @@ import React from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
-  Link
 } from "react-router-dom";
-import Particles from 'react-particles-js';
+
 
 import Header from "./components/Header";
 import Home from './components/Home';

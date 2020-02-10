@@ -54,7 +54,7 @@
   /* padding: 0  5px; */
   height: 60px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   overflow: hidden;
   float: top;
 }

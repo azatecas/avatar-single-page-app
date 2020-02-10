@@ -13,13 +13,19 @@ const MyDiv = styled.div`
   margin: 10px 5px;
   font-family: 'Permanent Marker', cursive;  
   box-shadow: -2px 2px 20px 0px rgba(0,0,0,0.47);
+  
+  &:hover{
+    background-color: #ffe291;
+background-image: url("https://www.transparenttextures.com/patterns/wet-snow.png");
+      
+  }
 
 `   //end of MyDiv
 
-const H1 = styled.h1`
-font-size: 28px;
-font-family: 'Permanent Marker', cursive;
-` //end of H1
+// const H1 = styled.h1`
+// font-size: 28px;
+// font-family: 'Permanent Marker', cursive;
+// ` //end of H1
 
 const ImgDiv = styled.div`  
   border-radius: 20px;
@@ -50,7 +56,7 @@ const CharacterCard = (props) => {
     return (
         <MyDiv>
         <ImgDiv>
-            <img src={photoUrl} width="350px" height="250px" style={{borderRadius: '10px 10px 0px 0px', objectFit: 'cover'}}/>
+            <img src={photoUrl} alt={`cartoon-character-${name}`}width="350px" height="250px" style={{borderRadius: '10px 10px 0px 0px', objectFit: 'cover'}}/>
         </ImgDiv>
         <div>
             <h1 className="character-name">{name}</h1>

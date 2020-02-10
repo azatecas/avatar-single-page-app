@@ -21,7 +21,7 @@ const Appa = styled.img`
 width: 25%;
 `
 const SecDiv = styled.div`    
-    z-index: 9;
+    z-index: 10;
     
 `
 
