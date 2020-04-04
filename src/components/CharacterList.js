@@ -19,6 +19,7 @@ const CharacterList = () => {
             .then(res => {
                 setCharacter(res.data.sort());
                 setLoading(false);
+                console.log('character',character)
             })
             .catch(err => {
                 console.log(err);
@@ -40,7 +41,6 @@ const CharacterList = () => {
         setSearch(
             e.target.value
         )
-        console.log(search);
     }
 
     return (
