@@ -17,7 +17,6 @@ import CharacterList from "./components/CharacterList";
 function App() {
   return (
     <div className="App">
-    
     <Router>
         <Header />    
         <Route path="/" exact component={Home} />

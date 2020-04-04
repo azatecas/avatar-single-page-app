@@ -3,27 +3,33 @@ import styled from 'styled-components';
 import Particles from 'react-particles-js';
 
 const ParentDiv = styled.div`
-    position: relative;
-    height: 90vh;
-    width:100%;
-    overflow: hidden;
-
-`
+  position: relative;
+  height: 90vh;
+  width:100%;
+  overflow: hidden;
+` //end of ParentDiv
 
 const MyDiv = styled.div`
-    ${'' /* padding-top: 15vh; */}
-    width: 100%;
-    ${'' /* height: 80vh; */}
-    ${'' /* background-color: skyblue; */}
-    position: absolute;
-`
+  width: 100%;
+  position: absolute;
+` //MyDiv
+
 const Appa = styled.img`
-width: 25%;
-`
+  width: 25%;
+  position: relative;
+
+  @media (max-width: 768px) {
+    width: 50%;
+  }
+
+  @media (max-width: 600px) {
+    width: 70%;
+  }
+` //Appa
+
 const SecDiv = styled.div`    
-    z-index: 10;
-    
-`
+   z-index: 10;  
+` //SecDiv
 
 const particleAttrs = {
     "particles": {
@@ -81,7 +87,7 @@ const particleAttrs = {
       },
       "move": {
         "enable": true,
-        "speed": .5,
+        "speed": .2,
         "direction": "left",
         "random": false,
         "straight": true,
@@ -140,19 +146,14 @@ const Home = () => {
 
     return(
         <ParentDiv>
-        <MyDiv id="particles-js">
-            <Particles params={particleAttrs} />
-        </MyDiv>
-        <SecDiv>
-            <h1>Hello World</h1>            
-            <Appa src={require('./appa.svg')} />
-        </SecDiv>
-            
+          <MyDiv id="particles-js">
+              <Particles params={particleAttrs} />
+          </MyDiv>
+          
+          <SecDiv>           
+              <Appa src={require('./appa.svg')} />
+          </SecDiv>            
         </ParentDiv>
-            
-        
-        
-            
         
     )
 }
