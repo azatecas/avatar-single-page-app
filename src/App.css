@@ -8,6 +8,55 @@
 		format('TrueType');
 }
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 .content-label{
   color: #8c4f00;
 }
@@ -44,19 +93,51 @@
   font-family: 'slayer', cursive;
 }
 
+@media screen and (max-width: 600px) {
+  .nav-logo {
+    width: 45%;
+  }
+  .nav-links {
+    width: 55%;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav-logo h1{
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .nav-logo h1{
+    font-size: 30px;
+  }
+}
+
+.search-bar{
+  width: 300px;
+  height: 35px;
+  margin: 0 0 20px 0;
+  border:none;
+  border-radius: 20px;
+  padding-left: 10px;
+  font-size: 20px;
+  outline: none;
+}
 .page-numbers{
   color: white;
   font-size: 24px;
 }
+
 .card-content{
-  border-bottom: 1px solid maroon;
-  width: 100%;
-  /* padding: 0  5px; */
-  height: 60px;
+  text-align: left;
+  font-size: 18px;
+  width: 90%;
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
-  float: top;
+  margin:auto;
 }
 
 .nav-links p {
@@ -64,13 +145,16 @@
 }
 
 .character-name {
+  padding: 10px 0 0 0;
   font-size: 20px;
-/* font-family: 'Permanent Marker', cursive; */
-font-family: 'slayer', cursive;
-border-bottom: 1px solid maroon;
+  font-family: 'slayer', cursive;
+  font-weight: 900;
+  /* border-bottom: 1px solid maroon; */
 }
 .character-page{
   background-color:maroon;
+  padding:3vh 0;
+  min-height: 90vh;
 }
 
 .pagination{

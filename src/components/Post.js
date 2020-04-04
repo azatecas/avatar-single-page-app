@@ -19,7 +19,7 @@ const LoadingDiv = styled.div`
 
 `
 
-const Post = ({character, loading}) => {
+const Post = ({character, loading, search}) => {
     if (loading){
         return <LoadingDiv >
         <div className="loader">Loading...</div>
@@ -28,9 +28,14 @@ const Post = ({character, loading}) => {
     return(
         <MyDiv>
             {character.map(item => {
-                return <CharacterCard character={item} key={item._id}/>
+                if(!item.name.toLowerCase().includes(search)){
+                    return null;
+                } else {
+                    return <CharacterCard character={item} key={item._id}  />
+                }
+                 
             })}
-            </MyDiv>
+        </MyDiv>
     )
 
 

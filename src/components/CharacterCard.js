@@ -1,53 +1,38 @@
-  
 import React from "react";
 import styled from 'styled-components';
 
 const MyDiv = styled.div`
-
-  width: 350px;
-  height: 550px;
+    width: 350px;
+    height: 450px;
     background-color: #ffce5c;
     background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
-
-  border-radius: 20px;
-  margin: 10px 5px;
-  font-family: 'Permanent Marker', cursive;  
-  box-shadow: -2px 2px 20px 0px rgba(0,0,0,0.47);
+    border-radius: 20px;
+    margin: 10px 5px;
+    font-family: 'Permanent Marker', cursive;  
+    box-shadow: -2px 2px 20px 0px rgba(0,0,0,0.47);
   
   &:hover{
     background-color: #ffe291;
-background-image: url("https://www.transparenttextures.com/patterns/wet-snow.png");
-      
+    background-image: url("https://www.transparenttextures.com/patterns/wet-snow.png");
   }
-
 `   //end of MyDiv
 
-// const H1 = styled.h1`
-// font-size: 28px;
-// font-family: 'Permanent Marker', cursive;
-// ` //end of H1
-
 const ImgDiv = styled.div`  
-  border-radius: 20px;
+  border-radius: 20px 20px 0 0;
+  height: 250px;
+  background-color: rgba(250, 79, 0, 0.514);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `   //end ImgDiv
+
 const DivStats = styled.div`  
   display: flex;
-  height: 200px;
+  height: 150px;
   flex-direction: column;
   align-items: start;
-  
   justify-content: start;
-
-  
-  ${'' /* font-family: 'arial'; */}
-  ${'' /* padding-left: 10px; */}
-
-  ${'' /* border: 1px solid green; */}
-  
 `   //end ImgDiv
-
-
-
 
 const CharacterCard = (props) => {
     // console.log('this is props',props.character);  
