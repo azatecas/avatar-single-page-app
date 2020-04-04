@@ -28,7 +28,7 @@ const Appa = styled.img`
 ` //Appa
 
 const SecDiv = styled.div`    
-   z-index: 10;  
+   z-index: 10;
 ` //SecDiv
 
 const particleAttrs = {
@@ -146,12 +146,38 @@ const Home = () => {
 
     return(
         <ParentDiv>
-          <MyDiv id="particles-js">
-              <Particles params={particleAttrs} />
-          </MyDiv>
           
-          <SecDiv>           
-              <Appa src={require('./appa.svg')} />
+           <MyDiv id="particles-js">
+              <Particles params={particleAttrs} />
+          </MyDiv> 
+          
+          <SecDiv>
+            <div>
+              <div className="sliding-background">
+                <img src={require('../img/blue-background2.png')} 
+                style={{
+                  background: "reapeat-x",
+                  height: "90vh", 
+                  width:"400%", 
+                  position:"absolute", 
+                  margin:"0", 
+                  left:"0"}}/>
+                 
+              </div>
+
+              <Appa src={require('./appa.svg')} alt="appa"/>
+               <div style={{
+                 position:"relative",
+                 fontSize:"2rem"
+               }}>
+                <h1>
+                  Welcome!
+                </h1>
+                <p style={{fontSize:"1.4rem"}}>Feel free to Search through the character's page</p>
+              </div>  
+            </div>
+                  
+              
           </SecDiv>            
         </ParentDiv>
         
