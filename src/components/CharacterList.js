@@ -39,7 +39,8 @@ const CharacterList = () => {
     //search handler
     const handleChange = e => {
         setSearch(
-            e.target.value
+            //makes search input lowercase
+            e.target.value.toLowerCase()
         )
     }
 

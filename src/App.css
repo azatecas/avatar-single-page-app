@@ -93,6 +93,7 @@ table {
   font-family: 'slayer', cursive;
 }
 
+
 @media screen and (max-width: 600px) {
   .nav-logo {
     width: 45%;
@@ -157,14 +158,14 @@ table {
   min-height: 90vh;
 }
 .sliding-background {
-  animation: slide 80s linear infinite;
+  animation: slide 70s linear infinite;
 }
 @keyframes slide{
   0%{
     transform: translate3d(0, 0, 0);
   }
   100%{
-    transform: translate3d(-1500px, 0, 0);
+    transform: translate3d(-1100px, 0, 0);
   }
 }
 
@@ -276,5 +277,19 @@ background: linear-gradient(0deg, rgba(129,0,87,1) 0%, rgba(35,0,91,1) 100%);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .nav-logo {
+    display: none;
+  }
+  .nav-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
   }
 }
