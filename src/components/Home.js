@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Particles from 'react-particles-js';
+import { findByLabelText } from '@testing-library/react';
 
 const ParentDiv = styled.div`
   position: relative;
@@ -154,11 +155,11 @@ const Home = () => {
           <SecDiv>
             <div>
               <div className="sliding-background">
-                <img src={require('../img/blue-background2.png')} 
+                <img src={require('../img/blue-background.svg')} 
                 style={{
                   background: "reapeat-x",
                   height: "90vh", 
-                  width:"400%", 
+                  // width:"4000px", 
                   position:"absolute", 
                   margin:"0", 
                   left:"0"}}/>
@@ -168,9 +169,11 @@ const Home = () => {
               <Appa src={require('./appa.svg')} alt="appa"/>
                <div style={{
                  position:"relative",
-                 fontSize:"2rem"
+                 fontSize:"2rem",
+                 color:'white',
+                 padding:'10%'
                }}>
-                <h1>
+                <h1 style={{margin:'30px'}}>
                   Welcome!
                 </h1>
                 <p style={{fontSize:"1.4rem"}}>Feel free to Search through the character's page</p>
