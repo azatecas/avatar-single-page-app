@@ -21,9 +21,7 @@ const LoadingDiv = styled.div`
 
 const Post = ({character, loading, search}) => {
     if (loading){
-        return <LoadingDiv >
-        <div className="loader">Loading...</div>
-        </LoadingDiv>
+        return <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     } 
     return(
         <MyDiv>
