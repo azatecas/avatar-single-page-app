@@ -92,6 +92,28 @@ table {
   color: white;
   font-family: 'slayer', cursive;
 }
+.appa-cont {
+  height: 50vh;
+}
+.appa-flying {
+  width: 25%;
+  position: relative;
+  animation: flying 30s linear 2s infinite alternate;
+}
+
+@media screen and (max-width: 768px) {
+  .appa-flying {
+    width: 50%;
+  }
+}
+
+
+@keyframes flying {
+  0% {margin-right: 20%;}
+ 
+  50% {margin-left: 50%;}
+  100% {margin-left: 0%;}
+}
 
 
 @media screen and (max-width: 600px) {
@@ -101,6 +123,9 @@ table {
   .nav-links {
     width: 55%;
     font-size: 15px;
+  }
+  .appa-flying {
+    width: 80%;
   }
 }
 
