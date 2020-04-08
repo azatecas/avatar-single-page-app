@@ -60,7 +60,7 @@ const Home = () => {
                 <h1 style={{margin:'30px'}}>
                   Welcome!
                 </h1>
-                <p style={{fontSize:"1.4rem"}}>Feel free to Search through the character's page</p>
+                <p style={{fontSize:"1.4rem"}}>Search Episodes or Characters</p>
               </div>  
             </div>
                   

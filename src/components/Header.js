@@ -21,6 +21,9 @@ export default function Header() {
                 <Link style={{ textDecoration: 'none' }} to="/">
                     <p className="nav-links">Home</p>
                 </Link>
+                <Link style={{ textDecoration: 'none' }} to="/episodes">
+                    <p className="nav-links">Episodes</p>
+                </Link> 
                 <Link style={{ textDecoration: 'none' }} to="/characters">
                     <p className="nav-links">Characters</p>
                 </Link> 
